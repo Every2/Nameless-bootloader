@@ -6,5 +6,6 @@ Aprendendo sobre como escrever um bootloader.
 
 
 # Como rodar
-make
-qemu-system-x86_64 -drive format=raw,file=os.bin
+`make`
+
+`qemu-system-x86_64 -drive format=raw,file=os.bin`

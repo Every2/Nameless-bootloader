@@ -23,6 +23,8 @@ Stage1_entrypoint:
     mov si, stage1_message
     call Real_mode_println
 
+    jmp Stage2_entrypoint
+    
     .halt: hlt
     jmp .halt
 
