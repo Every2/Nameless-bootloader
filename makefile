@@ -1,8 +1,13 @@
-.PHONY: clean, .force-rebuild
-all: bootloader.bin
+PROGRAM = os.bin
 
-bootloader.bin: os.asm .force-rebuild
-	nasm -fbin os.asm -o os.bin
+SRC			= os.asm
+
+all: ${PROGRAM}
+
+${PROGRAM}: ${SRC} 
+	nasm -fbin ${SRC} -o ${PROGRAM}
 
 clean:
-	rm *.bin
+	rm -f ${PROGRAM}
+
+.PHONY: clean, .force-rebuild, all
